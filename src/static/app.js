@@ -866,3 +866,27 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeFilters();
   fetchActivities();
 });
+
+/**
+ * Close the announcement banner and save the preference to localStorage
+ */
+function closeAnnouncement() {
+  const banner = document.getElementById("announcement-banner");
+  if (banner) {
+    banner.style.display = "none";
+    localStorage.setItem("announcementClosed", "true");
+  }
+}
+
+/**
+ * Initialize announcement banner visibility based on user preference
+ */
+function initializeAnnouncementBanner() {
+  const banner = document.getElementById("announcement-banner");
+  if (banner && localStorage.getItem("announcementClosed") === "true") {
+    banner.style.display = "none";
+  }
+}
+
+// Initialize announcement banner on page load
+initializeAnnouncementBanner();

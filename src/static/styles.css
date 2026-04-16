@@ -664,3 +664,59 @@ footer {
 #logout-button:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.announcement-banner {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.announcement-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.announcement-close:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .announcement-banner {
+    padding: 10px;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .announcement-close {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
